@@ -117,9 +117,9 @@ class Saque {
 		System.out.println("Cedulas:\t|\tR$10\t|\tR$20\t|\tR$50\t|\tR$100\t|");
 		System.out.print("Quantidade:");
 		for(byte i = 0;i < 4;i ++){
-            System.out.print("\t|\t"+quantidades[i]);
-        }
-        System.out.println("\t|");
+			System.out.print("\t|\t"+quantidades[i]);
+		}
+		System.out.println("\t|");
 		
 		return 0;
 	}
