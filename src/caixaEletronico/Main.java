@@ -17,26 +17,31 @@ public class Main {
 			System.out.println("1- Abastecer de notas");
 			System.out.println("2- Saque");
 			System.out.println("3- Mostrar quantidades: ");
-			System.out.println("4- Encerrar aplicação\n");
+			System.out.println("4- Encerrar aplicação");
+			System.out.print("-> ");
+			
 			resp= Keyboard.readInt();
 			
 			switch (resp) {
 				case 1: {
+					System.out.println();
 					notas = abastecimento.abastecerCedulas(notas);
 				}break;
 				case 2:{
 					int valor;
-					System.out.print("Digite o valor do saque: ");
+					System.out.print("\nDigite o valor do saque: ");
 					valor=Keyboard.readInt();							
+					System.out.println();
 					if (novoSaque.RealizarSaque(notas , valor) == 0) {
-						System.out.println("/nSaque bem sucedido!");
+						System.out.println("\nSaque bem sucedido!");
 					}
 				}break;
 				case 3:{
+					System.out.println();
 					notas.MostrarQuantidades();
 				}break;			
 				case 4:{
-					System.out.println("Você tem certeza que deseja encerrar a apricacao? (S/n)");
+					System.out.print("Você tem certeza que deseja encerrar a apricacao? (S/n): ");
 					char confirmacao;
 					confirmacao = Keyboard.readChar();
 					if ((confirmacao == 'S') || (confirmacao == 's'))
