@@ -22,6 +22,7 @@ class Cedulas {
  *onde deve ser informado qual o indice em que sera incluido cedulas,
  *e a quantidade a ser incluida
  */
+	
 	public void RegistrarNotas(int i, int qnt) {
 		cedulas[i]+=qnt;						//
 	}	

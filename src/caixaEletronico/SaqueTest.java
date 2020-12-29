@@ -22,34 +22,37 @@ class SaqueTest {
 		notas.MostrarQuantidades();
 		
 
-		System.out.println("\n-> Testa para saque de numero negativo (-1) \n Mostra 'Valor de saque impossivel' em caso de sucesso\n");
 		int valor = -1;
+		System.out.println("\n-> Testa para saque de numero negativo: "+valor);
+		System.out.println("Mostra 'Valor de saque impossivel' em caso de sucesso\n");
 		if ( (saque.RealizarSaque(notas, valor)) !=1) 
 			assertTrue(false);			
 		
 
-		System.out.println("\n-> Testa para valor de saque menor do que 10 (5) \n Mostra 'Valor de saque impossivel' em caso de sucesso\n");
 		valor = 5;
+		System.out.println("\n-> Testa para valor de saque menor do que 10: "+valor);
+		System.out.println("Mostra 'Valor de saque impossivel' em caso de sucesso\n");
 		if ( (saque.RealizarSaque(notas, valor)) !=1) 
 			assertTrue(false);			
 		
 
-		System.out.println("\n-> Tenta fazer para valor de saque não multiplo de 10 \n Mostra 'Valor de saque impossivel' em caso de sucesso\n");
 		valor = 22;
+		System.out.println("\n-> Tenta fazer para valor de saque não multiplo de 10: "+valor);
+		System.out.println("Mostra 'Valor de saque impossivel' em caso de sucesso\n");
 		if ( (saque.RealizarSaque(notas, valor)) !=1)
 			assertTrue(false);			
 		
 		
 
-		System.out.println("\n-> Tenta fazer para valor de saque maior que o saldo total do caixa \n Mostra 'Saldo insuficiente' em caso de sucesso\n");
 		int saldo;
 		saldo = (qnt*10)+(qnt*20)+(qnt*50)+(qnt*100);
 		valor = saldo + 10;
+		System.out.println("\n-> Tenta fazer para valor de saque maior que o saldo total do caixa: "+valor);
+		System.out.println("Mostra 'Saldo insuficiente' em caso de sucesso\n");
 		if ( (saque.RealizarSaque(notas, valor)) !=2)
 			assertTrue(false);
 		
 		
-
 		System.out.println("\n-> Tenta fazer um saque de 110 reais\n");
 		valor = 110;
 		if ( (saque.RealizarSaque(notas, valor)) != 0)
