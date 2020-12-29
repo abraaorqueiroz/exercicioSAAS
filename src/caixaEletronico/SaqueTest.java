@@ -70,7 +70,7 @@ class SaqueTest {
 			notas.MostrarQuantidades();
 		}
 		System.out.println("\n-> Tenta fazer mais um saque de 60 reais.\n Nesse caso não pode ser possível ");
-		if ( (saque.RealizarSaque(notas, valor)) == 0)
+		if ( (saque.RealizarSaque(notas, valor)) != 3)
 			assertTrue(false);
 		System.out.println("\n-> Mostra 'Combinacao impossivel' em caso de sucesso\n");
 		notas.MostrarQuantidades();

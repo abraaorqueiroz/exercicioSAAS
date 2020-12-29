@@ -1,6 +1,6 @@
 package caixaEletronico;
 
-import biblioteca.Keyboard;		//Inclui código para leitura de dados do teclado 
+import biblioteca.Keyboard;
 
 public class Main {
 	public static void main(String[] args) {
@@ -17,7 +17,7 @@ public class Main {
 			System.out.println("1- Abastecer de notas");
 			System.out.println("2- Saque");
 			System.out.println("3- Mostrar quantidades: ");
-			System.out.println("4- Encerrar aplicação");
+			System.out.println("4- Encerrar aplicação\n");
 			resp= Keyboard.readInt();
 			
 			switch (resp) {
@@ -26,10 +26,10 @@ public class Main {
 				}break;
 				case 2:{
 					int valor;
-					System.out.println("Digite o valor do saque (Valor inteiro, pois o caixa nao opera com moedas):");
+					System.out.print("Digite o valor do saque: ");
 					valor=Keyboard.readInt();							
 					if (novoSaque.RealizarSaque(notas , valor) == 0) {
-						System.out.println("Saque bem sucedido!");
+						System.out.println("/nSaque bem sucedido!");
 					}
 				}break;
 				case 3:{

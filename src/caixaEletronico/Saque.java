@@ -5,9 +5,9 @@ class Saque {
 	/**
 	 * 	O metodo CalculoQuantidades serve para calcular quantas cedulas de cada valor
 	 * serao necessarias para compor o valor do saque.
-	 * 	A estrategia escolhida é dar o minimo de notas possivel em cada saque.
+	 * 	A estrategia escolhida e dar o minimo de notas possivel em cada saque.
 	 * 	Dessa forma podendo ser realizado o maior numero de saques possiveis.
-	 * 	Assim e montado um vetor com a quantidade de cada cedula que sera fornecida,
+	 * 	E montado um vetor com a quantidade de cada cedula que sera fornecida,
 	 * sendo que a cada iteracao e adicionada a cedula com maoir valor disponivel,
 	 * menor que o valor faltante para o total do saque.
 	 * 
@@ -18,18 +18,20 @@ class Saque {
 	 * por exemplo 60, que inicialmente seria calculada uma combinacao de 50 e 10,
 	 * mas como 10 não esta disponivel, caso tenha 3 notas de 20 é possivel aprovar o saque.
 	 * 	O mesmo vale para valores com 80, 110, 130, etc.
-	 * 	Para solucionar esse probrema foi desenvolvido duas condicoes extras,
+	 * 	Para solucionar esse problema foi desenvolvido duas condicoes extras,
 	 * tentar remover uma nota de 50, caso exista no calculo de combinação e tentar refazer a combinacao,
-	 * tentar remover uma nota de 100, caso exista no calculo de combinação e tentar refazer a combinacao.
+	 * ou tentar remover uma nota de 100, caso exista no calculo de combinação e tentar refazer a combinacao.
 	 * 	Caso nao seja possivel fazer um combinacao, é inserido o valor -1, no primeiro elemento do vetor, idicando erro,
 	 * em caso de sucesso, retorna o valor 0.
 	 */
 
 	private int[] CalculoQuantidades(Cedulas notas , int valor) {
 		int soma=valor;
+		
 		boolean flag50=true;
 		boolean flag100=true;
 		boolean controle=true;
+
 		int quantidades[];
 		quantidades = new int [4];
 		for (byte i=0; i<4; i++) {
