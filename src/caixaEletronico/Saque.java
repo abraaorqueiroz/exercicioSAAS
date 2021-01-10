@@ -12,17 +12,17 @@ class Saque {
 	 * menor que o valor faltante para o total do saque.
 	 * 
 	 * 	Exixte uma familia de valores de saques que podem dar problemas,
-	 * são valores em que a combinação inclui por último uma nota de 10 reais,
-	 * sendo que não têm disponivel mais notas de 10 no caixa.
+	 * sÃ£o valores em que a combinaÃ§Ã£o inclui por Ãºltimo uma nota de 10 reais,
+	 * sendo que nÃ£o tÃªm disponivel mais notas de 10 no caixa.
 	 * 	Porem e possivel fazer uma combicao com outros valores de nota,
 	 * por exemplo 60, que inicialmente seria calculada uma combinacao de 50 e 10,
-	 * mas como 10 não esta disponivel, caso tenha 3 notas de 20 é possivel aprovar o saque.
+	 * mas como 10 nÃ£o esta disponivel, caso tenha 3 notas de 20 Ã© possivel aprovar o saque.
 	 * 	O mesmo vale para valores com 80, 110, 130, etc.
 	 * 	Para solucionar esse problema foi desenvolvido duas condicoes extras,
-	 * tentar remover uma nota de 50, caso exista no calculo de combinação e tentar refazer a combinacao,
-	 * ou tentar remover uma nota de 100, caso exista no calculo de combinação e tentar refazer a combinacao.
-	 * 	Caso nao seja possivel fazer um combinacao, é inserido o valor -1, no primeiro elemento do vetor, idicando erro,
-	 * em caso de sucesso, retorna o valor 0.
+	 * tentar remover uma nota de 50, caso exista no calculo de combinaÃ§Ã£o e tentar refazer a combinacao,
+	 * ou tentar remover uma nota de 100, caso exista no calculo de combinaÃ§Ã£o e tentar refazer a combinacao.
+	 * 	Caso nao seja possivel fazer um combinacao, Ã© inserido o valor -1, no primeiro elemento do vetor, idicando erro,
+	 * em caso de sucesso, retorna o vetor com a quantidades de notas.
 	 */
 
 	private int[] CalculoQuantidades(Cedulas notas , int valor) {
@@ -83,8 +83,8 @@ class Saque {
 	 * 	1- Valor nao multiplo de 10
 	 * 	2- Valor menor do que 10 (inclui valores negativos)
 	 * 	3- Valor maior do que o saldo do caixa.
-	 * 	Caso ache um dos erros acima, exibe mensagem de erro, e não realiza o saque,
-	 * retornando um código de erro correspondente ao erro.
+	 * 	Caso ache um dos erros acima, exibe mensagem de erro, e nÃ£o realiza o saque,
+	 * retornando um cÃ³digo de erro correspondente ao erro.
 	 * 	Apos isso chama o metodo CalculoQuantidades, e caso seja possivel realizar o saque,
 	 * imprime uma mensagem com a combinacao de notas para o saque, e retorna o codigo 0, que representa sucesso.
 	 */
